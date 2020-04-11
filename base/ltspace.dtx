@@ -32,7 +32,7 @@
 %<*driver>
 % \fi
 \ProvidesFile{ltspace.dtx}
-             [2020/03/07 v1.3l LaTeX Kernel (spacing)]
+             [2020/04/15 v1.3m LaTeX Kernel (spacing)]
 % \iffalse
 \documentclass{ltxdoc}
 \GetFileInfo{ltspace.dtx}
@@ -1217,6 +1217,18 @@
 % \end{macro}
 % \end{macro}
 % \end{macro}
+%
+% \changes{v1.3m}{2020/04/15}{Made softhyphen active in TU engines}
+%
+%   For Unicode engines, make the Unicode soft hyphen an active
+%   character defined as \cs{-}.
+%
+%    \begin{macrocode}
+\ifx\Umathcode\@undefined\else
+  \catcode "AD=13
+  \def^^ad{\-}
+\fi
+%    \end{macrocode}
 %
 % \begin{macro}{\obeycr}
 % \begin{macro}{\restorecr}
