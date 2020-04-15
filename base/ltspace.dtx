@@ -32,7 +32,7 @@
 %<*driver>
 % \fi
 \ProvidesFile{ltspace.dtx}
-             [2020/04/15 v1.3m LaTeX Kernel (spacing)]
+             [2020/04/24 v1.3m LaTeX Kernel (spacing)]
 % \iffalse
 \documentclass{ltxdoc}
 \GetFileInfo{ltspace.dtx}
@@ -1218,17 +1218,23 @@
 % \end{macro}
 % \end{macro}
 %
-% \changes{v1.3m}{2020/04/15}{Made softhyphen active in TU engines}
+% \begin{macro}{\textsofthyphen}
+% \changes{v1.3m}{2020/04/24}{Macro added}
 %
-%   For Unicode engines, make the Unicode soft hyphen an active
-%   character defined as \cs{-}.
+%   This is a robust command that has the same effect as inserting a
+%   soft hyphen in the input. By default, it becomes \cs{-}.
+%   For Unicode engines, we also make the Unicode soft hyphen an active
+%   character defined as \cs{textsofthyphen}. (For other engines, this
+%   will be done by the input encoding)
 %
 %    \begin{macrocode}
+\DeclareRobustCommand{\textsofthyphen}{\-}
 \ifx\Umathcode\@undefined\else
   \catcode "AD=13
-  \def^^ad{\-}
+  \def^^ad{\IeC{\textsofthyphen}}
 \fi
 %    \end{macrocode}
+% \end{macro}
 %
 % \begin{macro}{\obeycr}
 % \begin{macro}{\restorecr}
