@@ -1,7 +1,13 @@
-2020-04-15  Marcel Krüger    <Marcel.Krueger@latex-project.org>
+2020-04-24  Marcel Krüger     <Marcel.Krueger@latex-project.org>
 
   * ltspace.dtx:
-  Make Unicode softhyphen U+00AD active and defined as \-.
+  Add \textsofthyphen and make U+00AD active and defined as \- for
+  Unicode engines.
+  * inputenc.dtx:
+  Use \textsofthyphen instead of \- as definition for softhyphen codepoints.
+  * utf8ienc.dtx:
+  Use \textsofthyphen instead of \- as definition for U+00AD.
+
 2020-04-13  Frank Mittelbach  <Frank.Mittelbach@latex-project.org>
 
 	* ltfssini.dtx (subsection{Miscellaneous}):

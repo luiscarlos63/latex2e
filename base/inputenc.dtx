@@ -410,7 +410,7 @@
 %<cp1252&!ansinew>  \ProvidesFile{cp1252.def}
 %<cp1250>  \ProvidesFile{cp1250.def}
 %<cp1257>  \ProvidesFile{cp1257.def}
-   [2020/04/14 v1.3c Input encoding file]
+   [2020/04/24 v1.3d Input encoding file]
 %<cp850>%%
 %<cp850>%% If you need a Euro symbol, try cp858 instead.
 %<cp850>%%
@@ -941,6 +941,7 @@
 % \changes{v0.91}{1997/08/19}{Replaced \cs{dh}/\cs{DH} by
 %    \cs{dj}/\cs{DJ}.}
 % \changes{v0.94}{1997/12/17}{Changed 176 to \cs{textdegree}}
+% \changes{v1.3d}{2020/04/24}{Replaced \cs{-} by \cs{textsofthyphen}}
 %
 %    \begin{macrocode}
 %<*latin2>
@@ -1060,6 +1061,8 @@
 % typical office environments in the following languages:
 % Afrikaans, Catalan, English, Esperanto, French, Galician, German,
 % Italian, Maltese, and Turkish.
+%
+% \changes{v1.3d}{2020/04/24}{Replaced \cs{-} by \cs{textsofthyphen}}
 %
 %    \begin{macrocode}
 %<*latin3>
@@ -1186,6 +1189,7 @@
 %
 % \changes{v0.999}{2001/06/04}{Added \cs{textkra}, \cs{texttstroke} and
 %                              \cs{textTstroke} (pr/3336)}
+% \changes{v1.3d}{2020/04/24}{Replaced \cs{-} by \cs{textsofthyphen}}
 %    \begin{macrocode}
 %<*latin4>
 \DeclareInputText{160}{\nobreakspace}
@@ -1301,6 +1305,7 @@
 % It was contributed by H.~Turgut Uyar (\texttt{uyar@cs.itu.edu.tr});
 % it is used for Turkish.
 %
+% \changes{v1.3d}{2020/04/24}{Replaced \cs{-} by \cs{textsofthyphen}}
 %    \begin{macrocode}
 %<*latin5>
 \DeclareInputText{160}{\nobreakspace}
@@ -1528,6 +1533,7 @@
 %    Christian Bartels}
 % \changes{v0.9s}{1995/08/31}
 %      {Swapped ordfeminine and masculine. /2203}
+% \changes{v1.3d}{2020/04/24}{Replaced \cs{-} by \cs{textsofthyphen}}
 %
 %    \begin{macrocode}
 %<*cp850|cp858>
@@ -1663,6 +1669,7 @@
 % \changes{v0.91}{1997/08/19}{Replaced \cs{dh}/\cs{DH} by
 %    \cs{dj}/\cs{DJ}.}
 % \changes{v0.99}{1999/04/14}{Changed 212, see pr/2992}
+% \changes{v1.3d}{2020/04/24}{Replaced \cs{-} by \cs{textsofthyphen}}
 %
 %    \begin{macrocode}
 %<*cp852>
@@ -2432,6 +2439,7 @@
 % \changes{v0.99a}{2001/07/10}{Added latin9 (from Karsten Tinnefeld)}
 % \changes{v0.99b}{2002/06/16}{Added code points 142,158 for cp1252 (pr/3441)}
 % \changes{v0.99b}{2002/07/08}{Added code 128 (texteuro) for cp1252 (pr/3423)}
+% \changes{v1.3d}{2020/04/24}{Replaced \cs{-} by \cs{textsofthyphen}}
 %
 %    \begin{macrocode}
 %<*cp1252>
@@ -2643,6 +2651,7 @@
 % \changes{v1.0g}{2004/05/22}{Changed \cs{textpm} to \cs{pm}}
 % \changes{v1.1b}{2006/03/03}{Reverted back to \cs{textpm}
 %    for consistency.}
+% \changes{v1.3d}{2020/04/24}{Replaced \cs{-} by \cs{textsofthyphen}}
 %    \begin{macrocode}
 \DeclareInputText{160}{\nobreakspace}
 \DeclareInputText{161}{\k A}
@@ -2765,6 +2774,7 @@
 % \changes{v0.94}{1997/12/17}{Changed \cs{textsection} to \cs{S}
 %    for consistency.}
 % \changes{v0.99b}{2002/07/28}{Added code 128 (texteuro) for cp1250}
+% \changes{v1.3d}{2020/04/24}{Replaced \cs{-} by \cs{textsofthyphen}}
 %    \begin{macrocode}
 %<*cp1250>
 \DeclareInputText{128}{\texteuro}
@@ -2918,6 +2928,7 @@
 %    \texttt{http://www.microsoft.com/globaldev/reference/sbcs/1257.mspx}.
 %
 % \changes{v1.1b}{2006/03/03}{Large number of corrections (pr/3849)}
+% \changes{v1.3d}{2020/04/24}{Replaced \cs{-} by \cs{textsofthyphen}}
 %    \begin{macrocode}
 %<*cp1257>
 \DeclareInputText{128}{\texteuro}

@@ -414,15 +414,17 @@ processed as part of the formula.
 \githubissue{5}
 
 
+\subsection{Changes to direct input of softhyphens}
 
-\subsection{Add support for Unicode soft hyphens}
+Traditionally, \pkg{inputenc} defined softhyphen input ``characters''
+to correspond to \cs{-} such that these are treated as soft hyphens in
+\LaTeX. Especially for Unicode input, this is not always desirable.
+Therefore a separate command \cs{textsofthyphen} has been introduced to
+allow \LaTeX\ to differentiate between softhyphens inserted through
+softhyphen codepoints and softhyphens requested through \LaTeX's \cs{-}.
 
-For a long time, the UTF-8 option for \pkg{inputenc} made the Unicode
-soft hyphen character (U+00AD) an alias for the \LaTeX\ soft hyphen
-|\-|. The Unicode engines \XeTeX{} and \LuaTeX{} behaved
-different though: They either ignored U+00AD or interpreted it as an
-unconditional hyphen. This inconsistency is fixed now and \LaTeX{}
-always treats \texttt{U+00AD} as |\-|.
+Also support for handling Unicode softhyphens has been added for the Unicode
+based engines \XeTeX\ and \LuaTeX.
 
 
 
